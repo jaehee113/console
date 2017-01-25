@@ -90,6 +90,8 @@ This external svg file is located in: `assets/css/images/graphics/svg-symbols.sv
 
 This theme uses data-driven categorization, which makes the construction of categoization simple and succinct. The json file for category is located in _data/categories.json. Each category has three attributes: title, href and id (used to uniquely identify them). Please view the sample file to get a sense of it.
 
+To create the category pages, you need to create a 'category' folder and subfolders would be the name of categories. They can be further nested (i.e. sub categories). Each folder would have index.md (as we will be using folder structure for creating the page for category.) You can reference my website or refer to the examples provided.
+
 ## Layouts and Blocks
 
 This theme values simplicity. As such, every layout would look extremely analogous with each other. However, for extensibility there are about 7 layouts:
@@ -114,6 +116,20 @@ These layouts share same blocks, which are defined in _includes folder. There ar
 * **navigation**: the block for the menu.
 * **not_found**: for 404 page.
 * **search**: the block for search.
+
+## Stylesheets
+
+Jekyll uses sass, which is a scripting language that would be interpreted into css files. They are largely divided into three usages:
+
+* **blocks**: the rest. The files are well separated. ( I think. )
+* **configurations**: color settings and foundation styling will be here.
+* **mixins**: self-explanatory. The breakpoint would be set here for responsive web design.
+
+Based on your needs, you may modify these files.
+
+## Why some pages need to use folder structure
+
+To create a page, there are few ways to achieve it. One of the solutions would be to use folder structure. For example, if we were to create a page called 'archive', then you can create the folder called 'archive' and then include index.html.  For pages that use jekyll-paginate functionality, it is mandatory to use this. Otherwise, the functionality would not work. Please do not use .md extension. Use `.html` only as it would not work if this extension is not used.
 
 ## Contributing
 
