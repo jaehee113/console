@@ -3,6 +3,7 @@
 This is a simple yet powerful theme that will make your website look really stylish. This theme is especially suitable for users who would want to focus on writing blogs instead of working on front-end stuffs.
 
 The primary features of this theme are:
+* Gulp
 * Post search functionality
 * svg symbol functionality (plugin)
 * string original type check functionality (plugin)
@@ -37,6 +38,29 @@ And then execute:
 Or install it yourself as:
 
     $ gem install console-theme
+
+### Gulp settings
+
+To be able to use Gulp, you will need to install Node.js as well as its package manager (i.e. npm). Once you have installed npm. Go to the folder where the package.json is located and run `npm install` and it will install all the dependencies including Gulp.
+
+    $ npm install
+
+When running `gulp` command, it will run the default gulp task. Make sure to run the following command when you are in the folder that has `gulpfile.js`.
+
+    $ gulp
+
+This task would run several other tasks defined in `gulpfile.js.` To run individual tasks, please type `gulp [task name]`. For example:
+
+    $ gulp minify-css
+
+### Using a BrowserSync instead of Jekyll generated local server.
+
+When running Jekyll serve, it is possible to run a server. However, I chose to use BrowserSync instead of that for few reasons:
+
+* BrowserSync is a de-facto standard nowadays.
+* It is used with Gulp and Gulp provides bundling as well as minifying, which based on my knowledge is not possible with Jekyll generated server.
+
+Therefore, please do use gulp!
 
 ## Usage
 

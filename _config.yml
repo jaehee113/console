@@ -10,7 +10,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-production_url: http://localhost:4000
+production_url: "http://localhost:4000"
 url: http://localhost:4000 # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /posts/:categories/:title
 
@@ -29,19 +29,15 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-polyglot
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
 
 # Jekyll paginate settings
 paginate: 10
 paginate_path: "/archive/page:num/"
 
-# sass settings
-sass:
-  sass_dir: _sass
-  style: compressed
+# sass settings (you can turn this on but please run gulp)
+#sass:
+#  sass_dir: _sass
+#  style: compressed
 
 # Jekyll polyglot settings
 languages: ["en"]

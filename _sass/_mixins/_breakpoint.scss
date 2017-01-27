@@ -1,0 +1,57 @@
+// Simpler way to reference your breakpoints with a set of presets
+// as well as simple syntax to create new specific breakpoints!
+// The limit accepts min or max so you can set a min-width or max-width breakpoint,
+// the width is self explanatory and if you want to use the built in defaults
+// reference them (large, medium, or small constraints) in the last variable and
+// set the other two to 0.
+@mixin breakpoint($breakpoint-preset:0,$breakpoint-max-width:0,$breakpoint-min-width:0,
+  $breakpoint-name:'breakpoint-#{$breakpoint-max-width}-#{$breakpoint-min-width}'){
+
+  @if($breakpoint-preset=='none'){
+    @media(max-width:$breakpoint-max-width) and (min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+  @elseif($breakpoint-preset=='largest'){
+    $breakpoint-min-width:1000px;
+    $breakpoint-name:'largest';
+
+    @media(min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+  @elseif($breakpoint-preset=='computers'){
+    $breakpoint-min-width:701px;
+    $breakpoint-name:'computers';
+
+    @media(min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+  @elseif($breakpoint-preset=='mobile'){
+    $breakpoint-max-width:700px;
+    $breakpoint-min-width:0px;
+    $breakpoint-name:'mobile';
+
+    @media(max-width:$breakpoint-max-width) and (min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+   @elseif($breakpoint-preset=='tablet'){
+    $breakpoint-min-width:580px;
+    $breakpoint-name:'mobile';
+
+    @media(min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+  @elseif($breakpoint-preset=='smallest'){
+    $breakpoint-max-width:580px;
+    $breakpoint-min-width:0px;
+    $breakpoint-name:'mobile';
+
+    @media(max-width:$breakpoint-max-width) and (min-width:$breakpoint-min-width){
+      @content;
+    }
+  }
+}

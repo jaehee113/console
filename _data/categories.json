@@ -1,0 +1,39 @@
+[{
+  "title": "Computing",
+  "href": "/computing",
+  "id": "computing",
+  "subcategories": [{
+    "title": "Machine Learning",
+    "href": "/machine_learning",
+    "id": "machine_learning"
+  }, {
+    "title": "Web Programming",
+    "href": "/web_programming",
+    "id": "web_programming"
+  }, {
+    "title": "Algorithms",
+    "href": "/algorithms",
+    "id": "algorithms"
+  }]
+}, {
+  "title": "Language",
+  "href": "/language",
+  "id": "language",
+  "subcategories": [{
+    "title": "German",
+    "href": "/german",
+    "id": "german"
+  }, {
+    "title": "English",
+    "href": "/english",
+    "id": "english"
+  }]
+}, {
+  "title": "Blog",
+  "href": "/blog",
+  "id": "blog"
+}, {
+  "title": "General",
+  "href": "/general",
+  "id": "general"
+}]

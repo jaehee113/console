@@ -1,0 +1,26 @@
+.card{
+	&-details{
+		border-top: 4px solid map-get($colors, _blue-global);
+		padding: 24px 19px;
+		width: 100%;
+
+		&-header{
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 10px;
+
+			&-title{
+				font-weight: bold;
+			}
+
+			&-date{
+				font-style: italic;
+			}
+		}
+
+		&-readmore{
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}

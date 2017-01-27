@@ -1,0 +1,20 @@
+  <header class="site-header" role="banner">
+  <div id="top"></div>
+  <div class="wrapper-title">
+  	{% if layout["layout"] == "post" %}
+      <div class="site-title-header">{% assign word = 'posts' %}{% localize word %}/{{page.title | downcase | replace: ' ', '_'}}<blink>_</blink></div>
+    {% elsif layout["layout"] == "category" %}
+      {% unless site.active_lang == 'ko' %}
+      <div class="site-title-header">
+        {% assign word = 'category' %}{% localize word %}/{% assign word = page.category %}{% localize word %}<blink>_</blink>
+      </div>
+      {% else %}
+      <div class="site-title-header">category/{{page.title | downcase | replace: ' ', '_'}}<blink>_</blink>
+      </div>
+      {% endunless %}
+    {% else %}
+      {% assign word = page.title | downcase | replace: ' ', '_' %}
+      <div class="site-title-header">{% localize word %}<blink>_</blink></div>  
+    {% endif %}
+  </div>
+</header>

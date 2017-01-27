@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 ---
 <!DOCTYPE html>
 <html>
@@ -12,16 +12,10 @@ layout: post
       {% include global.html %}
       {% include search.html %}
       {% include header.html %}
-      <section class="wrapper post">
+      <section class="wrapper home">
         {{content}}
-        {% if page.comments %}
-          {% include comment.html %}
-        {% endif %}
       </section>
     </div>
-  {% if page.comments %}
-  <script id="dsq-count-scr" src="//philsensus.disqus.com/count.js" async></script>
-  {% endif %}
   </body>
   {% include footer.html %}
 </html>

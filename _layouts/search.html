@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: search
 ---
 <!DOCTYPE html>
 <html>
   <head>
-    {% include head.html %}
+  {% include head.html %}
   </head>
   <body>
     {% include navigation.html %}
@@ -12,10 +12,11 @@ layout: page
       {% include global.html %}
       {% include search.html %}
       {% include header.html %}
-      <section class="wrapper page">
+      <section class="wrapper search">
         {{content}}
       </section>
     </div>
   </body>
+
   {% include footer.html %}
 </html>

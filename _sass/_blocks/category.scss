@@ -1,0 +1,43 @@
+.category{
+	border: 3px solid map-get($colors, _white);
+	background-color: map-get($colors, _blue-header);
+	border-radius: 25px;
+	padding: 16px;
+
+	&-list{
+		list-style-type: none;
+
+		@include breakpoint(mobile){
+			margin-left: 0px !important;
+		}
+
+		&-link{
+			color: map-get($colors, _green-lime) !important;
+			font-size: 20px;
+			line-height: 3;
+			&:hover{
+				color: map-get($colors, _white) !important;
+			}
+		}
+	}
+
+	&-sub{
+
+		&-list{
+
+			@include breakpoint(mobile){
+				margin-left: 0px !important;
+			}
+
+			list-style-type: none;
+			
+			&-link{
+				color: map-get($colors, _white) !important;
+
+				&:hover{
+					color: map-get($colors, _green-lime) !important;
+				}
+			}
+		}
+	}
+}
