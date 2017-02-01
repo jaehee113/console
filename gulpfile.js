@@ -12,7 +12,9 @@ var gulp = require('gulp'),
   sassGlob = require('gulp-sass-glob'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
-  plumber = require('gulp-plumber');
+  plumber = require('gulp-plumber')
+  cp = require('child_process'),
+  jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
 //Bundling js
 gulp.task('bundle-js', function(){
@@ -46,6 +48,7 @@ gulp.task('sass', function(){
   .pipe(gulp.dest('./public/css'));
 });
 
+//Minifying css task
 gulp.task('minify-css', ['sass'], function(){
   return gulp.src('./public/css/style.css')
     .pipe(cleanCSS({
@@ -60,20 +63,40 @@ gulp.task('minify-css', ['sass'], function(){
     }));
 });
 
-gulp.task('browserSync', function(){
+
+//BrowserSync task
+gulp.task('browserSync', ['jekyll-build'], function(){
     browserSync.init({
         server: {
-          baseDir: '_site/'
+          baseDir: '_site'
         }
     });
 });
 
-//Run GULP!
-gulp.task('default', ['browserSync', 'bundle-js', 'minify-js', 'sass', 'minify-css'], function(){
+//Build Jekyll site
+gulp.task('jekyll-build', function(done){
+
+  browserSync.notify('Running $jekyll build...');
+  return cp.spawn(jekyllCommand, ['build'], {stdio: 'inherit'})
+          .on('close', done);
+
+});
+
+//Rebuilding Jekyll site
+gulp.task('jekyll-rebuild', ['jekyll-build'], function(){
+  browserSync.reload();
+});
+
+
+gulp.task('watch', function(){
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('public/css/*.css', ['minify-css']);
   gulp.watch('assets/js/*.js', ['bundle-js']);
   gulp.watch('public/js/client.js', ['minify-js']);
-  gulp.watch('*.html', browserSync.reload);
-  gulp.watch('public/js/*.js', browserSync.reload);
+  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch('public/js/*.js', ['jekyll-rebuild']);
 });
+
+
+//Run GULP!
+gulp.task('default', ['bundle-js', 'minify-js', 'sass', 'minify-css', 'browserSync', 'watch']);
