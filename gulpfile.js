@@ -93,7 +93,7 @@ gulp.task('watch', function(){
   gulp.watch('public/css/*.css', ['minify-css']);
   gulp.watch('assets/js/*.js', ['bundle-js']);
   gulp.watch('public/js/client.js', ['minify-js']);
-  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*', '_plugins/*', '_data/*'], ['jekyll-rebuild']);
   gulp.watch('public/js/*.js', ['jekyll-rebuild']);
 });
 
