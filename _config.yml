@@ -6,9 +6,7 @@
 title: Console
 email: jaeheelee0113@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Console theme simplifying Jekyll blog implementation process. Concise and fast theme.
 baseurl: "" # the subpath of your site, e.g. /blog
 production_url: "http://localhost:3000"
 url: http://localhost:3000 # the base hostname & protocol for your site, e.g. http://example.com
@@ -29,6 +27,13 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-polyglot
+exclude:
+  - package.json
+  - Rakefile
+  - node_modules
+  - Gemfile
+  - console-theme.gemspec
+  - gulpfile.js
 
 # Jekyll paginate settings
 paginate: 10
