@@ -123,8 +123,12 @@ jQuery(document).ready(function(){
       searchResults.innerHTML = '<div class=\"post-list-input-required\"><svg class=\"icon-warning\"><use xlink:href=\"/assets/images/graphics/svg-symbols.svg\#warning"></use></svg><li class="ask-input">' + getJSON("input_needed", currLang) + '<blink>_</blink> </li></div>';
       return;
     }
+    
+    if(resultArray.length < itemsOnPage - 1)
+      searchResults.innerHTML = renderResultList(resultArray, 0, resultArray.length - 1);
+    else
+      searchResults.innerHTML = renderResultList(resultArray, 0, itemsOnPage - 1);
 
-    searchResults.innerHTML = renderResultList(resultArray, 0, itemsOnPage - 1);
   }
 
   function getQueryVariable(variable) {

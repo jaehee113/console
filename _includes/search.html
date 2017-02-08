@@ -6,9 +6,9 @@
       <label class="container-search-inner-label" for="search-box">{% localize search %}</label>
     {% endif %}
     {% if site.active_lang == 'en' %}
-      <form class="container-search-inner-form" id="search-form" action="/search/" method="get">
+      <form class="container-search-inner-form" id="search-form" action="{{site.production_url}}/search/" method="get">
     {% else %}
-      <form class="container-search-inner-form" id="search-form" action="/{{site.active_lang}}/search/" method="get">
+      <form class="container-search-inner-form" id="search-form" action="{{site.production_url}}/{{site.active_lang}}/search/" method="get">
     {% endif %}
       <div class="container-search-inner-form-input">
         <input type="text" placeholder="{% localize lookformore %}" class="container-search-inner-form-box" id="search-box" name="query">

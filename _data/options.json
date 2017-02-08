@@ -1,5 +1,5 @@
 {
-  "parentTaskName": "bundle-js",
+  "parentTaskName": "bundle",
   "concat": {
     "active": true,
     "config": {}
@@ -20,6 +20,10 @@
       "./assets/js/lunr.min.js",
       "./assets/js/jquery.simplePagination.js",
       "./assets/js/svg4everybody.min.js"
+    ],
+    "css/style.css": [
+      "./assets/css/simplePagination.css",
+      "./assets/css/style.css"
     ]
   }
 }

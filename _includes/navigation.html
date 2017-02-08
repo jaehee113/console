@@ -10,7 +10,7 @@
     {% for p in navigation_pages %}
       {% if p.navigation_weight %}
         <li class="menu-item">
-          <a href="{{p.url}}" {% if p.url == page.url %} class="active menu-link" {% else %} class="menu-link" {% endif %}>
+          <a href="{{site.baseurl}}{{p.url}}" {% if p.url == page.url %} class="active menu-link" {% else %} class="menu-link" {% endif %}>
             {% assign word = p.title | downcase %}
             {% localize word %}
           </a>

@@ -1,6 +1,6 @@
 *.gem
 .bundle
 .sass-cache
-_site
 node_modules
 Gemfile.lock
+public

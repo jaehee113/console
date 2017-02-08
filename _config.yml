@@ -34,6 +34,8 @@ exclude:
   - Gemfile
   - console-theme.gemspec
   - gulpfile.js
+  - assets/js
+  - assets/css
 
 # Jekyll paginate settings
 paginate: 10

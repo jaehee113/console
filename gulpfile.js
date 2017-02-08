@@ -16,8 +16,8 @@ var gulp = require('gulp'),
   cp = require('child_process'),
   jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
-//Bundling js
-gulp.task('bundle-js', function(){
+//Bundling js / css
+gulp.task('bundle', function(){
   bundleFiles(bundleOptions);
 });
 
@@ -45,7 +45,7 @@ gulp.task('sass', function(){
       })
       .pipe(plumber())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./public/css'));
+  .pipe(gulp.dest('./assets/css'));
 });
 
 //Minifying css task
@@ -93,10 +93,10 @@ gulp.task('watch', function(){
   gulp.watch('public/css/*.css', ['minify-css']);
   gulp.watch('assets/js/*.js', ['bundle-js']);
   gulp.watch('public/js/client.js', ['minify-js']);
-  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*', '_plugins/*', '_data/*'], ['jekyll-rebuild']);
+  gulp.watch(['_config.yml','*.html', '*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', '_plugins/*', '_data/*'], ['jekyll-rebuild']);
   gulp.watch('public/js/*.js', ['jekyll-rebuild']);
 });
 
 
 //Run GULP!
-gulp.task('default', ['bundle-js', 'minify-js', 'sass', 'minify-css', 'browserSync', 'watch']);
+gulp.task('default', ['sass', 'bundle', 'minify-js', 'minify-css', 'browserSync', 'watch']);
