@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <head>
+  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
     
-    <title>Home</title>
+    <title>Search</title>
   
   <meta name="description" content="Console theme simplifying Jekyll blog implementation process. Concise and fast theme.
 ">
@@ -38,7 +38,7 @@
     
       
         <li class="menu-item">
-          <a href="/console/"  class="active menu-link" >
+          <a href="/console/"  class="menu-link" >
             
             Home
           </a>
@@ -104,79 +104,51 @@
   <div class="wrapper-title">
   	
       
-      <div class="site-title-header">Home<blink>_</blink></div>  
+      <div class="site-title-header">Search<blink>_</blink></div>  
     
   </div>
 </header>
 
-      <section class="wrapper home">
-        <div class="post">
-  <div class="post-list-title">
-    <span class="post-title">
-      Recent Posts
-    </span>
-  </div>
-  <ul class="post-list">
+      <section class="wrapper search">
+        
+<div class="container-search-inner">
     
     
-    <li class="post-list-enclosure-2pr">
-      <div class="card-details">
-        <div class="card-details-header">
-          <span class="card-details-header-title">sample</span>
-
-          <span class="card-details-header-category">
-          
-          </span>
-          <span class="card-details-header-date">
-            
-            
-              
-              
-              
-              
-                27
-              
-            
-              
-              
-              
-              
-                January
-              
-            
-              
-              
-              
-              
-                2017
-              
-            
-          </span>
-        </div>
-        <div class="card-details-main">
-          
-
-        </div>
-        <div class="card-details-readmore">
-          <a href="/console/posts/sample">Read more > </a>
-        </div>
+      <form class="container-search-inner-form" id="search-form" action="https://jaehee0113.github.io/console/search/" method="get">
+    
+      <div class="container-search-inner-form-input">
+        <input type="text" placeholder="What are you looking for?" class="container-search-inner-form-box" id="search-box" name="query" />
       </div>
-    </li>
-    
-  </ul>
-  <div class="post-list-full">
-    <a class="post-list-full-button-outline-link" href="https://jaehee0113.github.io/console/archive/">
-      <div class="post-list-full-button-outline">
-        <span class="post-list-full-button"> View All </span>
+      <div class="container-search-inner-form-submit">
+        <input class="container-search-inner-form-submit-button" type="submit" value="Go" />
       </div>
-    </a>
+    </form>
   </div>
-</div>
+
+<ul class="post-list" id="search-results"></ul>
+<div class="pagination"></div>
+
+<script>
+    window.store = {
+      
+        "console-posts-sample": {
+          "title": "sample",
+          "author": "",
+          "category": "",
+          "date": "27 January 2017",
+          "content": "",
+          "url": "/console/posts/sample"
+        }
+        
+      
+    };
+  </script>
 
 
       </section>
     </div>
   </body>
+
   <footer class="site-footer">
 
   <div class="wrapper">
