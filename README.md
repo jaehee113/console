@@ -1,5 +1,9 @@
 # console-theme
 
+For a demo, please [click here](http://jaehee0113.github.io/console).
+
+![alt tag](http://jaehee0113.github.io/console/screenshot.png)
+
 This is a simple yet powerful theme that will make your website look really stylish. This theme is especially suitable for users who would want to focus on writing blogs instead of working on front-end stuffs.
 
 The primary features of this theme are:
