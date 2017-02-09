@@ -1,5 +1,7 @@
 # console-theme
 
+[![Gem Version](https://badge.fury.io/rb/console-theme.svg)](https://badge.fury.io/rb/console-theme)
+
 For a demo, please [click here](http://jaehee0113.github.io/console).
 
 ![alt tag](http://jaehee0113.github.io/console/screenshot.png)
