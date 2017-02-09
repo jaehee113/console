@@ -20,6 +20,7 @@ The primary features of this theme are:
 * Offcanvas menu
 * Pagination functionality (utilises jekyll-paginate as well as jquery paginator)
 * Internationalization (uses jekyll-polyglot)
+* SEO (uses jekyll-seo-tag)
 
 There are more features to come. Stay tuned!
 

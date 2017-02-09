@@ -27,6 +27,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-polyglot
+  - jekyll-seo-tag
 exclude:
   - package.json
   - Rakefile
