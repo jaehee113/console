@@ -35,7 +35,7 @@
           "category": "{{ post.categories[0] | xml_escape }}",
           "date": "{{post.date | date_to_long_string}}",
           "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-          "url": "{{ post.url | xml_escape }}"
+          "url": "{{site.baseurl | xml_escape}}{{ post.url | xml_escape }}"
         }
         {% unless forloop.last %},{% endunless %}
       {% endfor %}
