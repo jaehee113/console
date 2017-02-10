@@ -1,5 +1,11 @@
 # console-theme
 
+[![Gem Version](https://badge.fury.io/rb/console-theme.svg)](https://badge.fury.io/rb/console-theme)
+
+For a demo, please [click here](http://jaehee0113.github.io/console).
+
+![alt tag](http://jaehee0113.github.io/console/screenshot.png)
+
 This is a simple yet powerful theme that will make your website look really stylish. This theme is especially suitable for users who would want to focus on writing blogs instead of working on front-end stuffs.
 
 The primary features of this theme are:
@@ -14,6 +20,7 @@ The primary features of this theme are:
 * Offcanvas menu
 * Pagination functionality (utilises jekyll-paginate as well as jquery paginator)
 * Internationalization (uses jekyll-polyglot)
+* SEO (uses jekyll-seo-tag)
 
 There are more features to come. Stay tuned!
 
