@@ -21,7 +21,7 @@ navigation_weight: 4
           {{post.content | strip_html | truncatewords: 60}}
         </div>
         <div class="card-details-readmore">
-          <a href="{{post.url}}">{% localize readmore %} > </a>
+          <a href="{{site.baseurl}}{{post.url}}">{% localize readmore %} > </a>
         </div>
       </div>
     </li>
