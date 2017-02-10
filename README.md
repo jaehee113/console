@@ -24,23 +24,23 @@ The primary features of this theme are:
 
 There are more features to come. Stay tuned!
 
-# Table of Content
+# Table of Contents
 
-1. [Installation](#installation)
-  1.1 [Gulp Settings](#gulp-settings)
-  1.2 [Using a BrowserSync instead of Jekyll generated local server](#why-browsersync)
-2. [Usage](#usage)
-  2.1 [Creating a post](#create-post)
-  2.2 [Integrating Disqus with your website](#integrate-disqus)
-  2.3 [Using svg symbol](#use-svg-symbol)
-  2.4 [Adding more languages](#add-languages)
-3. [Categorization](#categorization)
-4. [Layouts and Blocks](#layout-block)
-5. [Stylesheets](#stylesheets)
-6. [Why some pages need to use folder structure](#why-use-folder-structure)
-7. [Contributing](#contributing)
-8. [Development](#development)
-9. [License](#license)
+* [Installation](#installation)
+  * [Gulp Settings](#gulp-settings)
+  * [Using a BrowserSync instead of Jekyll generated local server](#why-browsersync)
+* [Usage](#usage)
+  * [Creating a post](#create-post)
+  * [Integrating Disqus with your website](#integrate-disqus)
+  * [Using svg symbol](#use-svg-symbol)
+  * [Adding more languages](#add-languages)
+* [Categorization](#categorization)
+* [Layouts and Blocks](#layout-block)
+* [Stylesheets](#stylesheets)
+* [Why some pages need to use folder structure](#why-use-folder-structure)
+* [Contributing](#contributing)
+* [Development](#development)
+* [License](#license)
 
 <div id='installation'></div>
 ## Installation
