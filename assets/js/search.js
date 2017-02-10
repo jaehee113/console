@@ -120,7 +120,8 @@ jQuery(document).ready(function(){
   function initSearchResults() {
 
     if(resultArray === null){
-      searchResults.innerHTML = '<div class=\"post-list-input-required\"><svg class=\"icon-warning\"><use xlink:href=\"/assets/images/graphics/svg-symbols.svg\#warning"></use></svg><li class="ask-input">' + getJSON("input_needed", currLang) + '<blink>_</blink> </li></div>';
+      if(searchResults != null)
+        searchResults.innerHTML = '<div class=\"post-list-input-required\"><svg class=\"icon-warning\"><use xlink:href=\"/assets/images/graphics/svg-symbols.svg\#warning"></use></svg><li class="ask-input">' + getJSON("input_needed", currLang) + '<blink>_</blink> </li></div>';
       return;
     }
     

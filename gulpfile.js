@@ -91,7 +91,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function(){
 gulp.task('watch', function(){
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch('public/css/*.css', ['minify-css']);
-  gulp.watch('assets/js/*.js', ['bundle-js']);
+  gulp.watch('assets/js/*.js', ['bundle']);
   gulp.watch('public/js/client.js', ['minify-js']);
   gulp.watch(['_config.yml','*.html', '*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', '_plugins/*', '_data/*'], ['jekyll-rebuild']);
   gulp.watch('public/js/*.js', ['jekyll-rebuild']);
