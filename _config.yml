@@ -37,6 +37,9 @@ exclude:
   - gulpfile.js
   - assets/js
   - assets/css
+  - screenshot.png
+  - LICENSE.txt
+  - README.md
 
 # Jekyll paginate settings
 paginate: 10

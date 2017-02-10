@@ -142,6 +142,23 @@ This would display beaker on the screen! Examples are available.
 
 This external svg file is located in: `assets/css/images/graphics/svg-symbols.svg`
 
+<div id='add-languages'></div>
+### Adding more languages
+
+This theme uses `jekyll-polyglot` plugin with the plugin I developed. I have already initiated the internationalization work. The partially translated languages are: English, German and Korean. To add languages, simply add the language acronym (e.g. German is de ('Deutsch') but really you can define your own acronym) to languages variable in `_config.yml` (e.g. `languages: ["en", "de", "ko"]`). To add more languages, you would need to do the following:
+
+1. **`localization.json`**: this is a nested json object file. The key represents the id for each translation and the value would have another key-value object with its key repesenting language acronym and the value being the translated word.
+
+2. **`search.js`**: this may later be integrated with `localization.json` file but at the moment it is separate. In this js file, you will see `populateJSON()` function. The translation json in this function will be used in search.html. To add more languages, you need to modify this function.
+
+The above files will then be used by the plugin called **Localization** (i.e. `_plugins/localize.rb`) and to use this simply:
+
+```liquid
+{% localize [key_id] %}
+```
+
+Explore the files and you will see plenty of examples. The plugin will automatically detect the language currently being used and then translate the word according to the one defined in `localization.json`.
+
 <div id='categorization'></div>
 ## Categorization
 
