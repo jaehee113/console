@@ -24,6 +24,25 @@ The primary features of this theme are:
 
 There are more features to come. Stay tuned!
 
+# Table of Content
+
+1. [Installation](#installation)
+  1.1 [Gulp Settings](#gulp-settings)
+  1.2 [Using a BrowserSync instead of Jekyll generated local server](#why-browsersync)
+2. [Usage](#usage)
+  2.1 [Creating a post](#create-post)
+  2.2 [Integrating Disqus with your website](#integrate-disqus)
+  2.3 [Using svg symbol](#use-svg-symbol)
+  2.4 [Adding more languages](#add-languages)
+3. [Categorization](#categorization)
+4. [Layouts and Blocks](#layout-block)
+5. [Stylesheets](#stylesheets)
+6. [Why some pages need to use folder structure](#why-use-folder-structure)
+7. [Contributing](#contributing)
+8. [Development](#development)
+9. [License](#license)
+
+<div id='installation'></div>
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
@@ -46,6 +65,7 @@ Or install it yourself as:
 
     $ gem install console-theme
 
+<div id='gulp-settings'></div>
 ### Gulp settings
 
 To be able to use Gulp, you will need to install Node.js as well as its package manager (i.e. npm). Once you have installed npm. Go to the folder where the package.json is located and run `npm install` and it will install all the dependencies including Gulp.
@@ -60,6 +80,7 @@ This task would run several other tasks defined in `gulpfile.js.` To run individ
 
     $ gulp minify-css
 
+<div id='why-browsersync'></div>
 ### Using a BrowserSync instead of Jekyll generated local server.
 
 When running Jekyll serve, it is possible to run a server. However, I chose to use BrowserSync instead of that for few reasons:
@@ -69,8 +90,10 @@ When running Jekyll serve, it is possible to run a server. However, I chose to u
 
 Therefore, please do use gulp!
 
+<div id='usage'></div>
 ## Usage
 
+<div id='create-post'></div>
 ### Creating a post
 
 Please use `rake` command to create a post. Using this command would automatically generate Jekyll front matter with a unique Disqus identifier. The syntax for rake command is [assuming that you are in the root folder]:
@@ -81,6 +104,7 @@ rake post title="Title" [date="2017-01-13"] [category="category"]
 
 [] are optionals.
 
+<div id='integrate-disqus'></div>
 ### Integrating Disqus with your website.
 
 You will need to first have Disqus account. Once the account is ready, please modify `config.yml` file by adding your shortname for disqus like below:
@@ -91,7 +115,8 @@ disqus_shortname: [your short name. Remove the bracket!]
 
 By doing this, every disqus script would use that information and disqus identifier to fetch relevant data.
 
-### How to use svg symbol
+<div id='use-svg-symbol'></div>
+### Using svg symbol
 
 Using svg symbol is a good practice. By doing this, we can organize svgs better while not losing the caching functionality. Make sure you change your svg file to the file that conforms to the svg symbol style:
 
@@ -117,12 +142,14 @@ This would display beaker on the screen! Examples are available.
 
 This external svg file is located in: `assets/css/images/graphics/svg-symbols.svg`
 
+<div id='categorization'></div>
 ## Categorization
 
 This theme uses data-driven categorization, which makes the construction of categoization simple and succinct. The json file for category is located in _data/categories.json. Each category has three attributes: title, href and id (used to uniquely identify them). Please view the sample file to get a sense of it.
 
 To create the category pages, you need to create a 'category' folder and subfolders would be the name of categories. They can be further nested (i.e. sub categories). Each folder would have index.md (as we will be using folder structure for creating the page for category.) You can reference my website or refer to the examples provided.
 
+<div id='layout-block'></div>
 ## Layouts and Blocks
 
 This theme values simplicity. As such, every layout would look extremely analogous with each other. However, for extensibility there are about 7 layouts:
@@ -148,6 +175,7 @@ These layouts share same blocks, which are defined in _includes folder. There ar
 * **not_found**: for 404 page.
 * **search**: the block for search.
 
+<div id='stylesheets'></div>
 ## Stylesheets
 
 Jekyll uses sass, which is a scripting language that would be interpreted into css files. They are largely divided into three usages:
@@ -158,14 +186,17 @@ Jekyll uses sass, which is a scripting language that would be interpreted into c
 
 Based on your needs, you may modify these files.
 
+<div id='why-use-folder-structure'></div>
 ## Why some pages need to use folder structure
 
 To create a page, there are few ways to achieve it. One of the solutions would be to use folder structure. For example, if we were to create a page called 'archive', then you can create the folder called 'archive' and then include index.html.  For pages that use jekyll-paginate functionality, it is mandatory to use this. Otherwise, the functionality would not work. Please do not use .md extension. Use `.html` only as it would not work if this extension is not used.
 
+<div id='contributing'></div>
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/jaehee0113/console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+<div id='development'></div>
 ## Development
 
 To set up your environment to develop this theme, run `bundle install`.
@@ -174,6 +205,7 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 
 When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
+<div id='license'></div>
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
