@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "console-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "1.0.0"
   spec.authors       = ["Jae Hee Lee"]
   spec.email         = ["jaeheelee0113@gmail.com"]
 
