@@ -28,7 +28,7 @@
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: map-get($colors,_blue-header);
+    background-color: $header-background;
   }
 
   &-title{
@@ -49,11 +49,12 @@
       &-header{
         @include breakpoint(computers){
           font: 400 55px "Pacifico", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+          color: $navigation-title-color !important;
         }
 
         @include breakpoint(mobile){
           font: 400 25px "Pacifico", 'Nanum Gothic', Helvetica, Arial, sans-serif;
-          color: map-get($colors, _green-lime) !important;
+          color: $navigation-title-color !important;
         }
       }
     }
@@ -61,7 +62,7 @@
     &-header{
       line-height: 1.5em !important;
       font: 25px "Press Start 2P", 'Nanum Gothic', Helvetica, Arial, sans-serif;
-      color: map-get($colors, _white);
+      color: $header-text-color;
 
       @include breakpoint(smallest){
         font: 10px "Press Start 2P", 'Nanum Gothic', Helvetica, Arial, sans-serif;
@@ -70,13 +71,14 @@
   }
 
   &-footer{
-    background-color: map-get($colors, _blue-header);
+    background-color: $footer-background;
     border-top: 1px solid #e8e8e8;
+    color: $footer-text-color !important;
   }
 
   &-global{
     min-height: 50px;
-    background-color: map-get($colors,_blue-global);
+    background-color: $global-background;
     display: flex;
     align-items: center;
     position: fixed;

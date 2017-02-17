@@ -9,6 +9,8 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
   cleanCSS = require('gulp-clean-css'),
+  concat = require('gulp-concat'),
+  jsonSass = require('gulp-json-sass'),
   sassGlob = require('gulp-sass-glob'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -30,6 +32,15 @@ gulp.task('minify-js', function(){
   .pipe(browserSync.reload({
     stream: true
   }));
+});
+
+gulp.task('jsonSass', function(){
+  return gulp.src('_data/variables.json')
+  .pipe(jsonSass({
+    sass: false
+  }))
+  .pipe(concat('variables.scss'))
+  .pipe(gulp.dest('./_sass/_configurations/'));
 });
 
 //Compile sass files into css file!
@@ -63,7 +74,6 @@ gulp.task('minify-css', ['sass'], function(){
     }));
 });
 
-
 //BrowserSync task
 gulp.task('browserSync', ['jekyll-build'], function(){
     browserSync.init({
@@ -89,14 +99,14 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function(){
 
 
 gulp.task('watch', function(){
-  gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch('public/css/*.css', ['minify-css']);
+  gulp.watch('_data/variables.json', ['jsonSass', 'sass']);
+  gulp.watch(['_sass/**/*.scss','public/css/*.css'], ['minify-css']);
   gulp.watch('assets/js/*.js', ['bundle']);
   gulp.watch('public/js/client.js', ['minify-js']);
   gulp.watch(['_config.yml','*.html', '*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', '_plugins/*', '_data/*'], ['jekyll-rebuild']);
-  gulp.watch('public/js/*.js', ['jekyll-rebuild']);
+  gulp.watch(['public/js/*.js', 'public/css/*.css'], ['jekyll-rebuild']);
 });
 
 
 //Run GULP!
-gulp.task('default', ['sass', 'bundle', 'minify-js', 'minify-css', 'browserSync', 'watch']);
+gulp.task('default', ['jsonSass', 'sass', 'bundle', 'minify-js', 'minify-css', 'browserSync', 'watch']);

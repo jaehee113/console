@@ -17,5 +17,16 @@
         </li>
       {% endif %}
     {% endfor %}
+  
+    {% for p in navigation_pages %}
+      {% if p.url == '/archive/' %}
+        <li class="menu-item">
+          <a href="{{site.baseurl}}{{p.url}}" {% if p.url == page.url %} class="active menu-link" {% else %} class="menu-link" {% endif %}>
+            {% assign word = p.title | downcase %}
+            {% localize word %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>

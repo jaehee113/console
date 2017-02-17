@@ -43,7 +43,7 @@
       @include breakpoint(computers){
           flex-basis: 50%;
           font: 400 25px "Pacifico", Helvetica, Arial, sans-serif;
-          color: map-get($colors, _green-lime) !important;
+          color: $global-logo-text-color !important;
           padding-left: 30px;
       }
 
@@ -105,7 +105,7 @@
       position: fixed;
       min-width: 100%;
       min-height: 100px;
-      background-color: map-get($colors, _blue-header);
+      background-color: $global-search-background;
       visibility: hidden; /* never use display: block and none when giving animation!*/
       opacity: 0;
       transition: visibility 0.2s, opacity 0.2s linear;
@@ -131,7 +131,7 @@
         flex-basis: 100%;
         font-size: 20px;
         margin: 3px;
-        color: map-get($colors, _white);
+        color: $global-search-text-color;
       }
 
       &-form{
@@ -147,7 +147,8 @@
           line-height: 1.5em;
           font-size: 15px;
           font-family: 'PT Sans', sans-serif;
-
+          background-color: $global-search-input-background;
+          color: $global-search-input-text-color;
         }
 
         &-input{
@@ -165,9 +166,9 @@
           &-button{
             height: 100%;
             padding: 15px;
-            background-color: map-get($colors, _blue-global);
-            color: map-get($colors, _white);
-            border: 2px solid map-get($colors, _white);
+            background-color: $global-search-submit-button-background;
+            color: $global-search-submit-button-text-color;
+            border: 2px solid $global-search-input-border-color;
           }
 
         }

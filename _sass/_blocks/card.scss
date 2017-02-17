@@ -1,8 +1,12 @@
 .card{
 	&-details{
-		border-top: 4px solid map-get($colors, _blue-global);
+		border-top: 4px solid $card-border-top-color;
 		padding: 24px 19px;
 		width: 100%;
+
+		&-main{
+			color: $card-extract-color;
+		}
 
 		&-header{
 			display: flex;
@@ -11,6 +15,7 @@
 
 			&-title{
 				font-weight: bold;
+				color: $card-title-color;
 			}
 
 			&-date{

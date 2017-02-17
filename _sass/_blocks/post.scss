@@ -43,7 +43,7 @@
 		&-page{
 
 			&-number{
-				border: 2px solid map-get($colors, _blue-header);
+				border: 2px solid $archive-border-color;
 				border-radius: 5px;
 				margin-right: 10px;
 				padding-left: 10px;
@@ -59,26 +59,26 @@
           			padding-right: 10px;
         		}
 
-				background-color: map-get($colors, _blue-header);
-				color: map-get($colors, _white);
+				background-color: $archive-inactive-page-background;
+				color: $archive-inactive-page-text-color;
 
 				&.active{
-					background-color: map-get($colors, _white);
+					background-color: $archive-active-page-background;
 				}
 
 				&-link{
-					color: white !important;
+					color: $archive-inactive-page-text-color !important;
 
 					&:visited{
-						color: white !important;
+						color: $archive-inactive-page-text-color !important;
 					}
 
 					&.active{
 
-						color: map-get($colors, _blue-header) !important;
+						color: $archive-active-page-text-color !important;
 
 						&:visited{
-							color: map-get($colors, _blue-header) !important;
+							color: $archive-active-page-text-color !important;
 						}
 					}
 				}
@@ -99,6 +99,7 @@
 		&-button{
 			&-outline{
 				padding: 1px 5px;
+				color: $archive-prev-next-page-text-color;
 			}
 		}
 	}
@@ -174,15 +175,16 @@
 			&-button{
 
 				&-outline{
-					border: 2px solid map-get($colors, _blue-global);
+					border: 2px solid $view-all-button-border;
 					padding: 10px 20px;
 					margin-top: 20px;
-					background-color: map-get($colors, _white);
-					color: map-get($colors, _blue-global);
+					background-color: $view-all-button-background;
+					color: $view-all-button-text-color;
 					transition: all 0.4s ease;
 					&:hover{
-						background-color: map-get($colors, _blue-global);
-						color: map-get($colors, _white);
+						border: 2px solid $view-all-button-border-hover;
+						background-color: $view-all-button-background-hover;
+						color: $view-all-button-text-color-hover;
 					}
 				}
 

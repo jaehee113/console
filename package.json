@@ -22,6 +22,7 @@
     "gulp-bundle-files": "^1.8.4662",
     "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
+    "gulp-json-sass": "0.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",

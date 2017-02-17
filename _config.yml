@@ -42,7 +42,7 @@ exclude:
   - README.md
 
 # Jekyll paginate settings
-paginate: 10
+paginate: 5
 paginate_path: "/archive/page:num/"
 
 # sass settings (you can turn this on but please run gulp)

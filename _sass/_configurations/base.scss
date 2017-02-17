@@ -44,8 +44,7 @@ html, body{
 
 body {
   font: 400 16px/1.5 "PT Sans", 'Nanum Gothic', Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: map-get($colors, _grey-background);
+  color: $body-text-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
