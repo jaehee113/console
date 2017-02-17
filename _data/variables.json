@@ -23,6 +23,13 @@
   	"submit-button-background" :  "map-get($colors,_blue-global)",
     "submit-button-text-color" : "map-get($colors,_white)"
   },
+  "search" : {
+    "input-background" : "map-get($colors,_white)",
+    "input-text-color" : "map-get($colors,_black)",
+    "input-border-color" : "map-get($colors,_white)",
+    "submit-button-background" :  "map-get($colors,_blue-global)",
+    "submit-button-text-color" : "map-get($colors,_white)"
+  },
   "header": {
   	"background" : "map-get($colors,_blue-header)",
   	"text-color" : "map-get($colors,_white)"
