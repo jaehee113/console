@@ -165,8 +165,6 @@ Explore the files and you will see plenty of examples. The plugin will automatic
 
 Colors can be customized by modifying settings located in `_data/variables.json`. The variables names should be quite intuitive but please refer to the following guidelines to how this theme is compartmentalized.
 
-![alt tag](http://jaehee0113.github.io/console/instruction.png)
-
 To change the color, you can directly add RGB code into it (e.g. #000000). However, it would be better if you can predefine your colors in `_sass/_configurations/color.scss' and then use map-get to get the value from that file.
 
 <div id='categorization'></div>
