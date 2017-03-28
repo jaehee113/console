@@ -34,7 +34,6 @@ There are more features to come. Stay tuned!
   * [Integrating Disqus with your website](#integrate-disqus)
   * [Using svg symbol](#use-svg-symbol)
   * [Adding more languages](#add-languages)
-  * [Customizing colors](#customize-colors)
 * [Categorization](#categorization)
 * [Layouts and Blocks](#layout-block)
 * [Stylesheets](#stylesheets)
@@ -159,13 +158,6 @@ The above files will then be used by the plugin called **Localization** (i.e. `_
 ```
 
 Explore the files and you will see plenty of examples. The plugin will automatically detect the language currently being used and then translate the word according to the one defined in `localization.json`.
-
-<div id='customize-colors'></div>
-### Customizing colors
-
-Colors can be customized by modifying settings located in `_data/variables.json`. The variables names should be quite intuitive but please refer to the following guidelines to how this theme is compartmentalized.
-
-To change the color, you can directly add RGB code into it (e.g. #000000). However, it would be better if you can predefine your colors in `_sass/_configurations/color.scss' and then use map-get to get the value from that file.
 
 <div id='categorization'></div>
 ## Categorization
