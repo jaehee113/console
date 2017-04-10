@@ -14,9 +14,15 @@ layout: post
       {% include header.html %}
       <section class="wrapper post">
         {{content}}
+
+        {% if page.highlights != false %}
+          {% include highlight.html %}
+        {% endif %}
+
         {% if page.comments %}
           {% include comment.html %}
         {% endif %}
+
       </section>
     </div>
   {% if page.comments %}

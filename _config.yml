@@ -21,6 +21,9 @@ linkedin_username: jaehee0113
 # Disqus settings (shortname is sufficient)
 disqus_shortname: Philsensus
 
+# txtpen settings (shortname is sufficient)
+txtpen_sitename: 
+
 # Build settings
 markdown: kramdown
 gems:
