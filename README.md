@@ -14,6 +14,7 @@ The primary features of this theme are:
 * svg symbol functionality (plugin)
 * string original type check functionality (plugin)
 * Rake to create a post
+* txtpen integration
 * Disqus integration (with each post having its unique identifier)
 * Color customization functionality
 * Categorization (data-driven)
@@ -32,6 +33,7 @@ There are more features to come. Stay tuned!
 * [Usage](#usage)
   * [Creating a post](#create-post)
   * [Integrating Disqus with your website](#integrate-disqus)
+  * [Integrating txtpen with your website](#integrate-txtpen)
   * [Using svg symbol](#use-svg-symbol)
   * [Adding more languages](#add-languages)
 * [Categorization](#categorization)
@@ -114,6 +116,15 @@ disqus_shortname: [your short name. Remove the bracket!]
 ```
 
 By doing this, every disqus script would use that information and disqus identifier to fetch relevant data.
+
+<div id='integrate-txtpen'></div>
+### Integrating txtpen with your website.
+
+You will need to first have txtpen account. Once the account is ready, please modify `config.yml` file by adding your sitename for txtpen like below:
+
+```yaml
+txtpen_sitename: [your site name. Remove the bracket!]
+```
 
 <div id='use-svg-symbol'></div>
 ### Using svg symbol
