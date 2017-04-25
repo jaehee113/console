@@ -19,7 +19,7 @@
 
     {% if include.param == 'main' %}
       <li class="category-list-enclosure">
-        <a class="category-list-link" href="{{site.production_url}}/category{{category.href}}">
+        <a class="category-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}">
           {% assign word = category.id %}
           {% localize word %}
           {% if forloop.last %}<blink>_</blink>{% endif %}
@@ -30,7 +30,7 @@
       <ul class="category-sub-list">
         {% for subcategory in category.subcategories %}
           <li class="category-sub-list-enclosure">
-            <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
+            <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
               {% assign word = subcategory.id %}{% localize word %}
             </a>
           </li>
@@ -45,7 +45,7 @@
           {% if category_title == page.category %}
             {% for subcategory in category.subcategories %}
               <li class="category-sub-list-enclosure">
-                <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
+                <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
                   {% assign word = subcategory.id %}{% localize word %}
                 </a>
               </li>
