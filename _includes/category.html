@@ -19,7 +19,7 @@
 
     {% if include.param == 'main' %}
       <li class="category-list-enclosure">
-        {% if site.active_lang != 'en' %}
+        {% if site.active_lang != site.default_lang %}
         <a class="category-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}">
         {% else %}
         <a class="category-list-link" href="{{site.production_url}}/category{{category.href}}">
@@ -34,7 +34,7 @@
       <ul class="category-sub-list">
         {% for subcategory in category.subcategories %}
           <li class="category-sub-list-enclosure">
-            {% if site.active_lang != 'en' %}
+            {% if site.active_lang != site.default_lang %}
             <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
             {% else %}
             <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
@@ -53,7 +53,7 @@
           {% if category_title == page.category %}
             {% for subcategory in category.subcategories %}
               <li class="category-sub-list-enclosure">
-                {% if site.active_lang != 'en' %}
+                {% if site.active_lang != site.default_lang %}
                 <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
                 {% else %}
                 <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
