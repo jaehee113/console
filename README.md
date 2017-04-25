@@ -48,25 +48,22 @@ There are more features to come. Stay tuned!
 ## Installation
 <div id='installation'></div>
 
-Add this line to your Jekyll site's Gemfile:
-
-```ruby
-gem "console-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: console-theme
-```
+Fork the repository and make sure that you checked out the **master** branch.
 
 And then execute:
 
-    $ bundle
+    $ npm install -i
 
-Or install it yourself as:
+This will install all the dependencies delineated in `package.json`. Then, run
 
-    $ gem install console-theme
+    $ gulp
+
+It has been known that sometimes it may be necessary to run above command **twice** (as minified js and css may not be generated). After running above command, then make sure that in `_config.yml`, if you are running locally, you change **production_url** and **url** to **http://127.0.0.1:4000** (highly likely to be the case). Then please run the following command:
+
+    $ bundle install
+    $ bundle exec jekyll serve
+
+There you go! If you would like to publish it using Github Pages, you can view my website for your reference.
 
 ## Gulp settings
 <div id='gulp-settings'></div>
