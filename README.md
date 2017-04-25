@@ -34,6 +34,7 @@ There are more features to come. Stay tuned!
   * [Creating a post](#create-post)
   * [Integrating Disqus with your website](#integrate-disqus)
   * [Integrating txtpen with your website](#integrate-txtpen)
+  * [Customizing Console Theme Colors](#customize-console-color)
   * [Using svg symbol](#use-svg-symbol)
   * [Adding more languages](#add-languages)
 * [Categorization](#categorization)
@@ -116,6 +117,13 @@ disqus_shortname: [your short name. Remove the bracket!]
 ```
 
 By doing this, every disqus script would use that information and disqus identifier to fetch relevant data.
+
+### Customizing Console Theme Colors
+<div id="customize-console-color"></div>
+
+![alt tag](https://github.com/jaehee0113/console/blob/master/instruction.png)
+
+If you carefully analyze the structure it is easy to change! Just simply go to `_data\variables.json` and you will see a list of variables. The variable names reflect the section name described above so it should be quite intuitive as to which variable to change. 
 
 ### Integrating txtpen with your website.
 <div id='integrate-txtpen'></div>
