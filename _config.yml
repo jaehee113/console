@@ -4,7 +4,7 @@
 # Site settings
 
 title: Console
-email: jaeheelee0113@gmail.com
+email: rezimitpo@naver.com
 description: > # this means to ignore newlines until "baseurl:"
   Console theme simplifying Jekyll blog implementation process. Concise and fast theme.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -13,10 +13,10 @@ url: http://localhost:3000 # the base hostname & protocol for your site, e.g. ht
 permalink: /posts/:categories/:title
 
 # Footer social links if not provided then the icon would not be visible
-twitter_username: jaehee0113
-github_username:  jaehee0113
-youtube_username: jaehee0113
-linkedin_username: jaehee0113
+twitter_username: super_insier
+github_username:  rezimitpo
+youtube_username: -
+linkedin_username: -
 
 # Disqus settings (shortname is sufficient)
 disqus_shortname: Philsensus
