@@ -16,7 +16,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber')
   cp = require('child_process'),
-  jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
+  jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'bundle exec jekyll';
 
 //Bundling js / css
 gulp.task('bundle', function(){
