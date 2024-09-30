@@ -1,0 +1,29 @@
+{
+  "parentTaskName": "bundle",
+  "concat": {
+    "active": true,
+    "config": {}
+  },
+  "uglify": {
+    "active": true,
+    "config": {}
+  },
+  "sourcemap": {
+    "active": true,
+    "config": {}
+  },
+  "destinationFolder": "public",
+  "files": {
+    "js/client.js": [
+      "./assets/js/search.js",
+      "./assets/js/main.js",
+      "./assets/js/lunr.min.js",
+      "./assets/js/jquery.simplePagination.js",
+      "./assets/js/svg4everybody.min.js"
+    ],
+    "css/style.css": [
+      "./assets/css/simplePagination.css",
+      "./assets/css/style.css"
+    ]
+  }
+}

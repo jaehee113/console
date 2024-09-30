@@ -1,0 +1,235 @@
+{
+  "home" : [
+    {"en" : "Home"},
+    {"de" : "Startseite"},
+    {"ko" : "Home"}
+  ],
+  "language": [{
+    "en": "English"
+  }, {
+    "de": "Deutsch"
+  }, {
+    "ko": "한국어"
+  }],
+  "about" : [
+    {"en" : "About"},
+    {"de" : "Über"},
+    {"ko" : "About"}
+  ],
+  "archive" : [
+    {"en" : "Archive"},
+    {"de" : "Archiv"},
+    {"ko" : "Archive"}
+  ],
+  "prev": [{
+    "en": "Prev"
+  }, {
+    "de": "Zurück"
+  }, {
+    "ko": "이전"
+  }],
+  "next": [{
+    "en": "Next"
+  }, {
+    "de": "Weiter"
+  }, {
+    "ko": "다음"
+  }],
+  "lookformore": [{
+    "en": "What are you looking for?"
+  }, {
+    "de": "Was möchten Sie suchen?"
+  }, {
+    "ko": "무엇을 찾고 싶으세요?"
+  }],
+  "search": [{
+    "en": "Search"
+  }, {
+    "de": "Suche"
+  }, {
+    "ko": "찾기"
+  }],
+  "readmore": [{
+    "en": "Read more"
+  }, {
+    "de": "Mehr anzeigen"
+  }, {
+    "ko": "더보기"
+  }],
+  "page_not_found" : [
+    {"en" : "Page not found"},
+    {"de" : "Diese Seite ist nicht verfügbar"},
+    {"ko" : "페이지를 찾을 수 없습니다"}
+  ],
+  "view_all" : [
+    {"en" : "View All"},
+    {"de" : "Alles sehen"},
+    {"ko" : "모든 포스트 보기"}
+  ],
+  "recent_posts" : [
+    {"en" : "Recent Posts"},
+    {"de" : "Neuste Beiträge"},
+    {"ko" : "가장 최신 포스트"}
+  ],
+  "machine_learning" : [
+    {"en" : "Machine Learning"},
+    {"de" : "Machine Learning"},
+    {"ko" : "머신러닝"}
+  ],
+  "web_programming" : [
+    {"en" : "Web Programming"},
+    {"de" : "Web Programmierung"},
+    {"ko" : "웹 프로그래밍"}
+  ],
+  "algorithms" : [
+    {"en" : "Algorithms"},
+    {"de" : "Algorithmus"},
+    {"ko" : "알고리즘"}
+  ],
+  "german" : [
+    {"en" : "German"},
+    {"de" : "Deutsch"},
+    {"ko" : "독일어"}
+  ],
+  "english" : [
+    {"en" : "English"},
+    {"de" : "Englisch"},
+    {"ko" : "영어"}
+  ],
+  "computing" : [
+    {"en" : "Computing"},
+    {"de" : "Informatik"},
+    {"ko" : "정보기술"}
+  ],
+  "language" : [
+    {"en" : "Language"},
+    {"de" : "Sprachen"},
+    {"ko" : "언어"}
+  ],
+  "blog" : [
+    {"en" : "Blog"},
+    {"de" : "Blog"},
+    {"ko" : "블로그"}
+  ],
+  "general" : [
+    {"en" : "General"},
+    {"de" : "Allgemeine"},
+    {"ko" : "일반"}
+  ],
+  "go" : [
+    {"en" : "Go"},
+    {"de" : "Suche"},
+    {"ko" : "이동"}
+  ],
+  "no_related_post" : [
+    {"en" : "No posts related to"},
+    {"de" : "Keine Beiträge für die Kategorie "},
+    {"ko" : "다음 카테고리와 연관된 글들이 없습니다: "}
+  ],
+  "category" : [
+    {"en" : "Category"},
+    {"de" : "Kategorie"},
+    {"ko" : "카테고리"}
+  ],
+  "categories" : [
+    {"en" : "Categories"},
+    {"de" : "Kategorien"},
+    {"ko" : "Categories"}
+  ],
+  "posts" : [
+    {"en" : "Posts"},
+    {"de" : "Beiträge"},
+    {"ko" : "포스트"}
+  ],
+  "january": [{
+    "en": "January"
+  }, {
+    "de": "Januar"
+  }, {
+    "ko": "1월"
+  }],
+  "february": [{
+    "en": "February"
+  }, {
+    "de": "Februar"
+  }, {
+    "ko": "2월"
+  }],
+  "march": [{
+    "en": "March"
+  }, {
+    "de": "März"
+  }, {
+    "ko": "3월"
+  }],
+  "april": [{
+    "en": "April"
+  }, {
+    "de": "April"
+  }, {
+    "ko": "4월"
+  }],
+  "may": [{
+    "en": "May"
+  }, {
+    "de": "Mai"
+  }, {
+    "ko": "5월"
+  }],
+  "june": [{
+    "en": "June"
+  }, {
+    "de": "Juni"
+  }, {
+    "ko": "6월"
+  }],
+  "july": [{
+    "en": "July"
+  }, {
+    "de": "Juli"
+  }, {
+    "ko": "7월"
+  }],
+  "august": [{
+    "en": "August"
+  }, {
+    "de": "August"
+  }, {
+    "ko": "8월"
+  }],
+  "september": [{
+    "en": "September"
+  }, {
+    "de": "September"
+  }, {
+    "ko": "9월"
+  }],
+  "october": [{
+    "en": "October"
+  }, {
+    "de": "Oktober"
+  }, {
+    "ko": "10월"
+  }],
+  "november": [{
+    "en": "November"
+  }, {
+    "de": "November"
+  }, {
+    "ko": "11월"
+  }],
+  "december": [{
+    "en": "December"
+  }, {
+    "de": "Dezember"
+  }, {
+    "ko": "12월"
+  }],
+  "related_posts": [{
+    "en": "Related Posts"
+  }, {
+    "de": "Verwandte Beiträge"
+  }, {
+    "ko": "관련 포스트"
+  }]
+}

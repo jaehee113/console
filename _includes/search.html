@@ -1,0 +1,44 @@
+{% if include.param != 'search' %}
+<div class="container-search-main">
+{% endif %}
+  <div class="container-search-inner">
+    {% if include.param != 'search' %}
+      <label class="container-search-inner-label" for="search-box">{% localize search %}</label>
+    {% endif %}
+    {% if site.active_lang == 'en' %}
+      <form class="container-search-inner-form" id="search-form" action="{{site.production_url}}/search" method="get">
+    {% else %}
+      <form class="container-search-inner-form" id="search-form" action="{{site.production_url}}/{{site.active_lang}}/search" method="get">
+    {% endif %}
+      <div class="container-search-inner-form-input">
+        <input type="text" placeholder="{% localize lookformore %}" class="container-search-inner-form-box" id="search-box" name="query">
+      </div>
+      <div class="container-search-inner-form-submit">
+        <input class="container-search-inner-form-submit-button" type="submit" value="{% localize go %}">
+      </div>
+    </form>
+  </div>
+{% if include.param != 'search' %}
+</div>
+{% endif %}
+
+{% if include.param == 'search' %}
+  <ul class="post-list" id="search-results"></ul>
+  <div class="pagination"></div>
+
+  <script>
+    window.store = {
+      {% for post in site.posts %}
+        "{{ post.url | slugify }}": {
+          "title": "{{ post.title | xml_escape }}",
+          "author": "{{ post.author | xml_escape }}",
+          "category": "{{ post.categories[0] | xml_escape }}",
+          "date": "{{post.date | date_to_long_string}}",
+          "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+          "url": "{{site.baseurl | xml_escape}}{{ post.url | xml_escape }}"
+        }
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+  </script>
+{% endif %}

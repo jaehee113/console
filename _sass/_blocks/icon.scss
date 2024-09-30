@@ -1,0 +1,139 @@
+.icon{
+
+	&-en{
+		width: 20px;
+		height: 10px;
+	}
+
+	&-ko{
+		width: 20px;
+		height: 10px;
+	}
+	
+	&-de{
+		width: 20px;
+		height: 10px;
+	}
+
+	&-chevron{
+		&-top{
+			width: 30px;
+			height: 30px;
+			margin: 10px;
+			fill: map-get($colors, _white);
+		}
+	}
+
+	&-wrench{
+		width: 50px;
+		height: 50px;
+		margin: 10px;
+		fill: map-get($colors, _blue-linkedin);
+	}
+
+	&-warning{
+		width: 30px;
+		height: 20px;
+		fill: map-get($colors, _green-light);
+	}
+
+	&-tablet{
+		width: 30px;
+		height: 20px;
+		fill: map-get($colors, _green-light);
+	}
+
+	&-linkedin{
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		fill: map-get($colors, _white);
+		transition: fill 0.4s ease;
+
+		&:hover{
+			fill: map-get($colors, _blue-linkedin);
+		}
+	}
+
+	&-github{
+		width: 50px;
+		max-height: 50px;
+		padding: 10px;
+		fill: map-get($colors, _white);
+		transition: fill 0.4s ease;
+
+		&:hover{
+			fill: map-get($colors, _blue-github);
+		}
+	}
+
+	&-youtube{
+		width: 50px;
+		max-height: 50px;
+		padding: 10px;
+		fill: map-get($colors, _white);
+		transition: fill 0.4s ease;
+
+		&:hover{
+			fill: map-get($colors, _red-youtube);
+		}
+	}
+
+	&-jekyll{
+		width: 20px;
+		max-height: 20px;
+		fill: map-get($colors, _white);
+	}
+
+	&-hamburger{
+
+		cursor: pointer;
+
+		@include breakpoint(largest){
+			width: 50px !important;
+		}
+
+		@include breakpoint(computers){
+			width: 40px;
+		}
+
+		@include breakpoint(mobile){
+			width: 40px;
+		}
+
+		max-height: 50px;
+		padding: 10px;
+		fill: map-get($colors, _white);
+
+	}
+
+	&-search{
+
+		cursor: pointer;
+
+		@include breakpoint(largest){
+			width: 50px !important;
+		}
+
+		@include breakpoint(computers){
+			width: 40px;
+		}
+
+		@include breakpoint(mobile){
+			width: 40px;
+		}
+
+		max-height: 50px;
+		padding: 10px;
+		fill: map-get($colors, _white);
+	}
+
+	&-cross{
+		cursor: pointer;
+		max-height: 45px;
+		padding: 5px;
+		width: 100%;
+		fill: map-get($colors, _white);
+	}
+
+}

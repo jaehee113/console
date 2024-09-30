@@ -1,0 +1,31 @@
+$colors:(
+	_black:#000,
+	_blue-blizzard:#bfdff2,
+	_blue-cobalt:#0038C8,
+	_blue-cornflower:#5a72b6,
+	_blue-cello:#203f69,
+	_blue-jelly-bean:#2877a8,
+	_blue-seagull:#80bfe6,
+	_blue-global:#2B3239,
+	_blue-header:#363F48,
+	_blue-zodiac:#0f2543,
+	_blue-linkedin:#0075B4,
+	_blue-github:#9CDAF0,
+	_grey-abbey:#53565a,
+	_grey-quill:#d9d9d6,
+	_grey-background:#EDF1F4,
+	_grey-tuna:#393b3e,
+	_grey-light:#E7E9EE,
+	_grey-desert-storm:#f4f4f3,
+	_green-lime: #93ffa0,
+	_green-light: #09D794,
+	_red-old-brick:#931a1a,
+	_red-youtube:#C1181D,
+	_purple-danube:#6a86d6,
+	_purple-jacksons:#1a3793,
+	_white:#fff,
+	_yellow-tulip-tree:#e8b136
+);
+
+$dark:map-get($colors,_grey-abbey);
+$light:map-get($colors,_white);

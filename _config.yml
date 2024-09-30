@@ -1,0 +1,62 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+
+title: Console
+description: > # this means to ignore newlines until "baseurl:"
+  Console theme simplifying Jekyll blog implementation process. Concise and fast theme.
+baseurl: "" # the subpath of your site, e.g. /blog
+production_url: "http://localhost:3000"
+url: http://localhost:3000 # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /posts/:categories/:title
+
+# Footer social links if not provided then the icon would not be visible
+twitter_username: 
+github_username:  
+youtube_username: 
+linkedin_username: 
+
+# Disqus settings (shortname is sufficient)
+disqus_shortname:
+
+# txtpen settings (shortname is sufficient)
+txtpen_sitename: 
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-polyglot
+  - jekyll-seo-tag
+exclude:
+  - package.json
+  - Rakefile
+  - node_modules
+  - Gemfile
+  - console-theme.gemspec
+  - gulpfile.js
+  - assets/js
+  - assets/css
+  - screenshot.png
+  - LICENSE.txt
+  - README.md
+
+# Jekyll paginate settings
+paginate: 5
+paginate_path: "/archive/page:num/"
+
+# Related posts settings
+max_related_posts_num: 4
+
+# sass settings (you can turn this on but please run gulp)
+#sass:
+#  sass_dir: _sass
+#  style: compressed
+
+# Jekyll polyglot settings
+languages: ["en"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css"]
+parallel_localization: false

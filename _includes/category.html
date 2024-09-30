@@ -1,0 +1,99 @@
+<div class="container-main-nopost">
+{% if include.param == 'post' %}
+  {% assign curr_size = site.categories[page.category] | size %}
+  {% unless curr_size > 0 %}
+    {% assign word = page.category %}
+    <h3> {% localize no_related_post %} {% localize word %} </h3>
+  {% endunless %}
+{% endif %}
+</div>
+
+{% if include.param != 'post' %}
+<div class="category">
+
+  {% if include.param == 'main' %}
+    <ul class="category-list">
+  {% endif %}
+
+  {% for category in site.data.categories %}
+
+    {% if include.param == 'main' %}
+      <li class="category-list-enclosure">
+        {% if site.active_lang != site.default_lang %}
+        <a class="category-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}">
+        {% else %}
+        <a class="category-list-link" href="{{site.production_url}}/category{{category.href}}">
+        {% endif %}
+          {% assign word = category.id %}
+          {% localize word %}
+          {% if forloop.last %}<blink>_</blink>{% endif %}
+        </a>
+    {% endif %}
+
+    {% if category.subcategories != null and page.category == null and category.id != page.category %}
+      <ul class="category-sub-list">
+        {% for subcategory in category.subcategories %}
+          <li class="category-sub-list-enclosure">
+            {% if site.active_lang != site.default_lang %}
+            <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
+            {% else %}
+            <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
+            {% endif %}
+              {% assign word = subcategory.id %}{% localize word %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if category.subcategories != null and category.id == page.category %}
+      <ul class="category-sub-list">
+        {% for category in site.data.categories %}
+          {% assign category_title = category.title | downcase %}
+          {% if category_title == page.category %}
+            {% for subcategory in category.subcategories %}
+              <li class="category-sub-list-enclosure">
+                {% if site.active_lang != site.default_lang %}
+                <a class="category-sub-list-link" href="{{site.production_url}}/{{site.active_lang}}/category{{category.href}}{{subcategory.href}}">
+                {% else %}
+                <a class="category-sub-list-link" href="{{site.production_url}}/category{{category.href}}{{subcategory.href}}">
+                {% endif %}
+                  {% assign word = subcategory.id %}{% localize word %}
+                </a>
+              </li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if include.param == 'main' %}
+      </li>
+    {% endif %}
+
+  {% endfor %}
+
+  {% if include.param == 'main' %}
+    </ul>
+  {% endif %}
+
+</div>
+{% else %}
+  {% if curr_size > 0 %}
+  <ul class="post-list">
+      {% assign posts = site.categories[page.category] | sort:"date" | reverse %}
+      {% for post in posts %}
+      <li class="post-list-enclosure-2pr">
+        <div class="card-details">
+          <div class="card-details-header">
+            <span class="card-details-header-title">{{post.title}}</span>
+          </div>
+          <div class="card-details-readmore">
+            <a href="{{post.url}}"> {% localize readmore %} > </a>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,59 @@
+---
+# Warning:
+# For the paginator to work, this file must be in archive folder
+# and the file extension cannot be other than html.
+
+layout: page
+title: Archive
+---
+
+<div class="post">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+    <li class="post-list-enclosure-1pr">
+      <div class="card-details">
+        <div class="card-details-header">
+          <span class="card-details-header-title">{{post.title}}</span>
+          <span class="card-details-header-date">{{post.date | date_to_long_string}}</span>
+        </div>
+        <div class="card-details-main">
+          {{post.content | strip_html | truncatewords: 60}}
+        </div>
+        <div class="card-details-readmore">
+          <a href="{{site.baseurl}}{{post.url}}">{% localize readmore %} > </a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="post-pagination">
+    <div class="post-pagination-list">
+      {% for num in (1..paginator.total_pages) %}
+        <span class="post-pagination-page-number {% if paginator.page == num %}active{% endif %}">
+          {% if num == 1 %}
+            <a class="post-pagination-page-number-link {% if paginator.page == num %}active{% endif %}" href="/archive">{{num}}</a> 
+          {% else %}
+            <a class="post-pagination-page-number-link {% if paginator.page == num %}active{% endif %}" href="/archive/page{{num}}">{{num}}</a>
+          {% endif %}
+        </span>
+      {% endfor %}
+      
+    </div>
+    <div class="post-pagination-direction">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        <div class="post-pagination-button-outline">
+            <span class="post-pagination-button">{% localize prev %}</span>
+        </div>
+      </a>
+      {% endif %}
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">
+        <div class="post-pagination-button-outline">
+          <span class="post-pagination-button">{% localize next %}</span>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

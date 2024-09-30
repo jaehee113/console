@@ -1,0 +1,51 @@
+<div class="post">
+  <div class="post-list-title">
+    <span class="post-title">
+      {% localize recent_posts %}
+    </span>
+  </div>
+  <ul class="post-list">
+    {% assign posts = site.posts | sort:"date" | reverse %}
+    {% for post in posts limit: 3 %}
+    <li class="post-list-enclosure-2pr">
+      <div class="card-details">
+        <div class="card-details-header">
+          <span class="card-details-header-title">{{post.title}}</span>
+
+          <span class="card-details-header-category">
+          {% for category in post.categories %}
+            {{category}}
+          {% endfor %}
+          </span>
+          <span class="card-details-header-date">
+            {% assign dateStrings = post.date | date_to_long_string | split: ' ' %}
+            {% for dateString in dateStrings %}
+              {% assign word = dateString | downcase %}
+              {% capture datatype %} {% typecheck word %} {% endcapture %}
+              {% assign datatype = datatype | strip %}
+              {% if datatype == 'int' %}
+                {{word}}
+              {% else %}
+                {% localize word %}
+              {% endif %}
+            {% endfor %}
+          </span>
+        </div>
+        <div class="card-details-main">
+          {{post.content | truncatewords: 30}}
+        </div>
+        <div class="card-details-readmore">
+          <a href="{{post.url}}">{% localize readmore %} > </a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="post-list-full">
+    <a class="post-list-full-button-outline-link" href="{{site.production_url}}/archive/">
+      <div class="post-list-full-button-outline">
+        <span class="post-list-full-button"> {% localize view_all %} </span>
+      </div>
+    </a>
+  </div>
+</div>

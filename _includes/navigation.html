@@ -1,0 +1,32 @@
+<nav class="site-navigation">
+  <div class="site-navigation-close">
+    {% svgicon cross %}
+  </div>
+  <div class="site-title-container">
+        <a class="site-title-container-header" href="/">{{site.title}}</a>
+  </div>
+  <ul class="menu-list">
+    {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+    {% for p in navigation_pages %}
+      {% if p.navigation_weight %}
+        <li class="menu-item">
+          <a href="{{site.baseurl}}{{p.url}}" {% if p.url == page.url %} class="active menu-link" {% else %} class="menu-link" {% endif %}>
+            {% assign word = p.title | downcase %}
+            {% localize word %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  
+    {% for p in navigation_pages %}
+      {% if p.url == '/archive/' %}
+        <li class="menu-item">
+          <a href="{{site.baseurl}}{{p.url}}" {% if p.url == page.url %} class="active menu-link" {% else %} class="menu-link" {% endif %}>
+            {% assign word = p.title | downcase %}
+            {% localize word %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

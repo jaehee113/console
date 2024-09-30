@@ -1,0 +1,194 @@
+.container{
+
+  flex-basis: 100%;
+
+  &-related{
+    margin-top: 100px;
+    border-top: 1px solid map-get($colors, _grey-light);
+    padding: 10px;    
+  }
+
+  &-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-inner{
+    display: flex;
+
+    &-hamburger{
+
+      min-height: 50px;
+      display: flex;
+
+      @include breakpoint(computers){
+        flex-basis: 5%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include breakpoint(mobile){
+        flex-basis: 15%;
+      }
+
+    }
+
+  }
+
+  &-main{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include breakpoint(computers){
+      flex-basis: 95%;
+    }
+
+    @include breakpoint(mobile){
+      flex-basis: 70%;
+    }
+
+    &-title{
+
+      @include breakpoint(computers){
+          flex-basis: 50%;
+          font: 400 25px "Pacifico", Helvetica, Arial, sans-serif;
+          color: $global-logo-text-color !important;
+          padding-left: 30px;
+      }
+
+      @include breakpoint(mobile){
+        display: none;
+      }
+      
+    }
+
+    &-language{
+
+      display: flex;
+
+      @include breakpoint(computers){
+        flex-basis: 50%;
+        justify-content: flex-end;
+        padding-right: 30px;
+      }
+
+      @include breakpoint(mobile){
+        flex-basis: 100%;
+        justify-content: center;
+      }
+
+      &-link{
+        margin-left: 25px;
+
+        &:first-child{
+          margin: 0px;
+        }
+
+        @include breakpoint(mobile){
+          font-size: 13px;
+        }
+      }
+
+    }
+  }
+
+  &-search{
+
+    display: flex;
+
+    @include breakpoint(computers){
+      flex-basis: 5%;
+      justify-content: center;
+    }
+
+    @include breakpoint(mobile){
+      flex-basis: 15%;
+      justify-content: flex-end;
+    }
+
+    &-main{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      min-width: 100%;
+      min-height: 100px;
+      background-color: $global-search-background;
+      visibility: hidden; /* never use display: block and none when giving animation!*/
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s linear;
+
+      @include breakpoint(computers){
+        padding: 30px 50px 50px 50px;
+      }
+
+      &.active{
+        visibility: visible;
+        opacity: 1;
+      }
+
+    }
+
+    &-inner{
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 50%;
+
+      &-label{
+        flex-basis: 100%;
+        font-size: 20px;
+        margin: 3px;
+        color: $global-search-text-color;
+      }
+
+      &-form{
+
+        flex-basis: 100%;
+        display: flex;
+
+        &-box{
+
+          min-width: 100%;
+          border: none;
+          padding: 15px;
+          line-height: 1.5em;
+          font-size: 15px;
+          font-family: 'PT Sans', sans-serif;
+          background-color: $global-search-input-background;
+          color: $global-search-input-text-color;
+        }
+
+        &-input{
+
+          flex-basis: 95%;
+          min-height: 40px;
+          background-color: map-get($colors, _white);
+
+        }
+
+        &-submit{
+
+          flex-basis: 5%;
+
+          &-button{
+            height: 100%;
+            padding: 15px;
+            background-color: $global-search-submit-button-background;
+            color: $global-search-submit-button-text-color;
+            border: 2px solid $global-search-input-border-color;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

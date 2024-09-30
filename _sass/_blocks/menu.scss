@@ -1,0 +1,36 @@
+.menu{
+  &-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
+
+  &-item{
+    @include breakpoint(computers){
+      margin: 15px;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    @include breakpoint(mobile){
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &-link{
+    @include breakpoint(computers){
+      font-size: 30px;
+    }
+
+    @include breakpoint(mobile){
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+---
+layout: main
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include navigation.html %}
+    <div class="application">
+      {% include global.html %}
+      {% include search.html %}
+      {% include header.html %}
+      <section class="wrapper main">
+        {{content}}
+      </section>
+    </div>
+  </body>
+  {% include footer.html %}
+</html>

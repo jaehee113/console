@@ -1,0 +1,33 @@
+<div class="site-global">
+  <div class="container">
+    <div class="container-inner">
+      <div class="container-inner-hamburger">
+        {% svgicon hamburger %}
+      </div>
+      <div class="container-main">
+        <a class="container-main-title" href="{{site.production_url}}">
+          {{site.title}}
+        </a>
+        <div class="container-main-language">
+          {% for language in site.languages %}
+            {% if language != 'en'%}
+              {% assign revised_url = {{site.production_url}} | append: '/' | append: {{language}} | append: {{page.url}} %}
+              {% if language == 'de'%}
+              <a class="container-main-language-link {% if language == site.active_lang %} active {% endif %}" id="{{language}}" href="{{revised_url}}">Deutsch</a>
+              {% endif %}
+              {% if language == 'ko' %}
+              <a class="container-main-language-link {% if language == site.active_lang %} active {% endif %}" id="{{language}}" href="{{revised_url}}">한국어</a>
+              {% endif %}
+            {% else %}
+            <a class="container-main-language-link {% if language == site.active_lang %} active {% endif %}" id="{{language}}" href="{{site.production_url}}">English</a>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+      <div class="container-search">
+        {% svgicon search %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.url == "/404" %}
+    <meta http-equiv="refresh" content="5; url=/">
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if layout["layout"] == "post" %}
+    <title>{{page.title}}</title>
+  {% elsif layout["layout"] == "category" %}
+    {% unless site.active_lang == 'ko' %}
+    <title>{% assign word = page.category %}{% localize word %}</title>
+    {% else %}
+      <title>{{page.title}}</title>
+    {% endunless %}
+  {% else %}
+    {% assign word = page.title | downcase | replace: ' ', '_' %}
+    <title>{% localize word %}</title>
+  {% endif %}
+  <meta name="description" content="{{site.description}}">
+  <link rel="stylesheet" type="text/css" href="{{site.production_url}}/public/css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Press+Start+2P|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="{{site.production_url}}/public/js/client.min.js"></script>
+  {% seo title=false %}
+</head>

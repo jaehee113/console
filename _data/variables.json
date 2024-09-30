@@ -1,0 +1,66 @@
+{
+  "global" : {
+    "background" : "map-get($colors,_blue-global)",
+    "text-color": "map-get($colors,_white)",
+    "logo-text-color": "map-get($colors,_green-lime)"
+  },
+  "navigation": {
+  	"background" : "map-get($colors,_blue-global)",
+    "title-color" : "map-get($colors,_green-lime)",
+  	"text-color": "map-get($colors,_white)",
+    "mobile-logo-text-color": "map-get($colors,_green-lime)"
+  },
+  "footer":{
+  	"background" : "map-get($colors,_blue-header)",
+  	"text-color" : "map-get($colors,_white)"
+  },
+  "global-search" : {
+  	"background" : "map-get($colors,_blue-header)",
+    "text-color" : "map-get($colors,_white)",
+  	"input-background" : "map-get($colors,_white)",
+    "input-text-color" : "map-get($colors,_black)",
+    "input-border-color" : "map-get($colors,_white)",
+  	"submit-button-background" :  "map-get($colors,_blue-global)",
+    "submit-button-text-color" : "map-get($colors,_white)"
+  },
+  "search" : {
+    "input-background" : "map-get($colors,_white)",
+    "input-text-color" : "map-get($colors,_black)",
+    "input-border-color" : "map-get($colors,_white)",
+    "submit-button-background" :  "map-get($colors,_blue-global)",
+    "submit-button-text-color" : "map-get($colors,_white)"
+  },
+  "header": {
+  	"background" : "map-get($colors,_blue-header)",
+  	"text-color" : "map-get($colors,_white)"
+  },
+  "body": {
+  	"text-color": "map-get($colors,_black)"
+  },
+  "view-all-button": {
+    "border": "map-get($colors, _blue-global)",
+    "background": "map-get($colors, _white)",
+    "text-color": "map-get($colors, _blue-global)",
+    "border-hover": "map-get($colors, _blue-global)",
+    "background-hover": "map-get($colors, _blue-global)",
+    "text-color-hover": "map-get($colors, _white)"
+  },
+  "card": {
+    "border-top-color": "map-get($colors,_blue-global)",
+  	"title-color": "map-get($colors,_black)",
+  	"extract-color": "map-get($colors,_black)"
+  },
+  "category": {
+  	"background": "map-get($colors,_blue-global)",
+  	"main-color": "map-get($colors,_green-lime)",
+  	"sub-color": "map-get($colors,_white)"
+  },
+  "archive": {
+    "border-color": "map-get($colors,_blue-header)",
+  	"active-page-background": "map-get($colors,_white)",
+    "active-page-text-color": "map-get($colors,_blue-header)",
+    "inactive-page-background": "map-get($colors,_blue-header)",
+    "inactive-page-text-color": "map-get($colors,_white)",
+    "prev-next-page-text-color": "map-get($colors,_blue-header)"
+  }
+}

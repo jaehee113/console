@@ -1,0 +1,143 @@
+.site{
+
+  &-404{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-icon{
+
+    }
+
+    &-title{
+      line-height: 1.5em !important;
+      font: 30px "Press Start 2P", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+      padding: 10px;
+    }
+  }
+
+  &-header{
+    height: 10%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $header-background;
+  }
+
+  &-title{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &-container{
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+
+      &-header{
+        @include breakpoint(computers){
+          font: 400 55px "Pacifico", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+          color: $navigation-title-color !important;
+        }
+
+        @include breakpoint(mobile){
+          font: 400 25px "Pacifico", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+          color: $navigation-title-color !important;
+        }
+      }
+    }
+
+    &-header{
+      line-height: 1.5em !important;
+      font: 25px "Press Start 2P", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+      color: $header-text-color;
+
+      @include breakpoint(smallest){
+        font: 10px "Press Start 2P", 'Nanum Gothic', Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+
+  &-footer{
+    background-color: $footer-background;
+    border-top: 1px solid #e8e8e8;
+    color: $footer-text-color !important;
+  }
+
+  &-global{
+    min-height: 50px;
+    background-color: $global-background;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    min-width: 100%;
+    z-index: 2;
+    top: 0;
+  }
+
+  &-navigation{
+
+    &-close{
+      @include breakpoint(computers){
+        width: 40px;
+        height: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include breakpoint(mobile){
+        display: none;
+      }
+    }
+
+    position: fixed;
+    background-color: map-get($colors,_blue-global);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(computers){
+      height: 100%;
+      min-width: 20%;
+      transform: translateX(-101%);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+      top: 0;
+      padding: 5px;
+    }
+
+    @include breakpoint(mobile){
+      width: 100%;
+      min-height: 130px;
+      padding: 5px;
+      visibility: hidden; /* never use display: block and none when giving animation!*/
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s linear;
+    }
+
+    &.active{
+      @include breakpoint(computers){
+        transform: none;
+      }
+
+      @include breakpoint(mobile){
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+  }
+}
+

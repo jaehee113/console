@@ -1,0 +1,204 @@
+.post{
+
+	display: flex;
+	flex-direction: column;
+
+	&-content{
+		margin-bottom: 30px;
+
+		& h2{
+			font-size: 32px;
+		}
+
+		& h3{
+			font-size: 28px;
+		}
+
+		& h4{
+			font-size: 20px;
+		}
+
+	}
+
+	&-header{
+		margin-bottom: 30px;
+	}
+
+	&-title{
+		font-size: 42px;
+	  letter-spacing: -1px;
+	  line-height: 1;
+	  @include breakpoint(smallest){
+	    font-size: 25px;
+	  }
+	}
+
+	&-pagination{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+
+		&-page{
+
+			&-number{
+				border: 2px solid $archive-border-color;
+				border-radius: 5px;
+				margin-right: 10px;
+				padding-left: 10px;
+				padding-right: 5px;
+
+				&:first-child{
+          			padding-left: 10px;
+          			padding-right: 5px;
+        		}
+
+        		&:last-child{
+        			padding-left:  10px;
+          			padding-right: 10px;
+        		}
+
+				background-color: $archive-inactive-page-background;
+				color: $archive-inactive-page-text-color;
+
+				&.active{
+					background-color: $archive-active-page-background;
+				}
+
+				&-link{
+					color: $archive-inactive-page-text-color !important;
+
+					&:visited{
+						color: $archive-inactive-page-text-color !important;
+					}
+
+					&.active{
+
+						color: $archive-active-page-text-color !important;
+
+						&:visited{
+							color: $archive-active-page-text-color !important;
+						}
+					}
+				}
+
+			}
+
+		}
+
+		&-list{
+			margin: 5px;
+			padding-left: 10px;
+		}
+
+		&-direction{
+			display: flex;
+		}
+
+		&-button{
+			&-outline{
+				padding: 1px 5px;
+				color: $archive-prev-next-page-text-color;
+			}
+		}
+	}
+
+	&-list{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		&-input-required{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-basis: 100%;
+			margin: 30px;
+			font: 13px "Press Start 2P", Helvetica, Arial, sans-serif;
+		}
+
+		&-no-results{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex-basis: 100%;
+			margin: 50px;
+			font: 20px "Press Start 2P", Helvetica, Arial, sans-serif;
+		}
+
+		&-title{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		&-enclosure{
+
+			/*two posts per row*/
+			&-2pr{
+				flex-basis: 48.5%;
+				border: 1px solid #d9d9d6;
+				border-bottom: 3px solid #d9d9d6;
+				display: flex;
+
+				@include breakpoint(smallest){
+					flex-basis: 100%;
+				}
+
+				@include breakpoint(tablet){
+					&:nth-child(odd){
+						margin-right: 16px;
+					}
+				}
+			}
+
+			/*one post per row*/
+			&-1pr{
+				border: 1px solid #d9d9d6;
+				border-bottom: 3px solid #d9d9d6;
+				display: flex;
+				flex-basis: 100%;
+			}
+		}
+
+		&-full{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-button{
+
+				&-outline{
+					border: 2px solid $view-all-button-border;
+					padding: 10px 20px;
+					margin-top: 20px;
+					background-color: $view-all-button-background;
+					color: $view-all-button-text-color;
+					transition: all 0.4s ease;
+					&:hover{
+						border: 2px solid $view-all-button-border-hover;
+						background-color: $view-all-button-background-hover;
+						color: $view-all-button-text-color-hover;
+					}
+				}
+
+			}
+		}
+	}
+
+	&-meta{
+		font-size: 14px;
+  	color: #828282;
+	}
+
+	&-link{
+		display: block;
+  	font-size: 24px;
+	}
+}
